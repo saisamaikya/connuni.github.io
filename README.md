@@ -1,1 +1,1 @@
-# connuni.github.io
+# connectuniversity
