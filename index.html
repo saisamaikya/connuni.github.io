@@ -550,6 +550,7 @@ setTimeout(() => main(), 100);
 
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
+    console.log(embeddedservice_bootstrap, 'embeddedservice_bootstrap');
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
@@ -566,7 +567,7 @@ setTimeout(() => main(), 100);
 		}
 	};
 </script>
-<script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWSDOMessagingforWeb1737478684080/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' crossorigin="anonymous" src='https://pr1737471134046.my.site.com/ESWSDOMessagingforWeb1737478684080/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body>
