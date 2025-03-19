@@ -548,6 +548,25 @@ setTimeout(() => main(), 100);
 
 
 
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DKd00000AXnuq',
+				'SDO_Messaging_for_Web',
+				'https://pr1737471134046.my.site.com/ESWSDOMessagingforWeb1737478684080',
+				{
+					scrt2URL: 'https://pr1737471134046.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWSDOMessagingforWeb1737478684080/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body>
