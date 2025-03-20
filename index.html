@@ -651,8 +651,8 @@ setTimeout(() => main(), 100);
 <script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWNewConnectUni1742463325128/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> -->
 
 
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
+<script>
+  function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
@@ -668,9 +668,16 @@ setTimeout(() => main(), 100);
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-</script>
-<script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWconnectunitest21742476244395/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
+  if (!window.embeddedservice_bootstrap) {
+           var script = document.createElement('script');
+           script.setAttribute('src', 'https://pr1737471134046.my.site.com/ESWconnectunitest21742476244395/assets/js/bootstrap.min.js');
+           script.onload = function() { initEmbeddedMessaging(); };
+           document.body.appendChild(script);
+       } else {
+           initEmbeddedMessaging();
+       }
+</script>
 
 </body>
 </html>
