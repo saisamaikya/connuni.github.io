@@ -630,7 +630,7 @@ setTimeout(() => main(), 100);
 <!-- <script type="text/javascript" class="embeddedMessagingBootstrapScript" src="https://orgfarm-2425352f9e-dev-ed.develop.my.site.com/ESWESAWebDeployment1724800920657/assets/js/bootstrap.min.js"></script> -->
 <!-- <script id="inert-script" type="text/javascript" src="https://orgfarm-2425352f9e-dev-ed.develop.my.site.com/ESWESAWebDeployment1724800920657/assets/js/inert.min.js"></script> -->
 
-<script type='text/javascript'>
+<!-- <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
@@ -648,8 +648,28 @@ setTimeout(() => main(), 100);
 		}
 	};
 </script>
-<script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWNewConnectUni1742463325128/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWNewConnectUni1742463325128/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> -->
 
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DKd00000AXnuq',
+				'connect_uni_test_2',
+				'https://pr1737471134046.my.site.com/ESWconnectunitest21742476244395',
+				{
+					scrt2URL: 'https://pr1737471134046.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://pr1737471134046.my.site.com/ESWconnectunitest21742476244395/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body>
